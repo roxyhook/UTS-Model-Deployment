@@ -76,7 +76,7 @@ class ModelHandler:
         self.save_encoder_to_file('encoder_target.pkl', self.label_encoder)
 
     def createModel(self):
-        self.model = RandomForestClassifier() 
+        self.model = RandomForestClassifier(max_depth=10) 
     
     def trainModel(self):
         self.model.fit(self.x_train, self.y_train)
